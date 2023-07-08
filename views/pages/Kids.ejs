@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Clothing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <style>
+        .happy{
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvTCgnd19AknMltG5sgcx1aXzZ6SAMNAesZfdlNPKlrw&usqp=CAU&ec=48665698') repeat 6px center;
+
+            }
+        .container { 
+        
+        position: relative;
+        border: 0px solid green; 
+        }
+
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navabar------------------------------------------------------------------------------------------------------------------------------ -->
+    <!-- <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+               
+          <a class="navbar-brand" href="#">
+                ____The Culture Clothing.Co
+          </a>
+        </div>
+      </nav> -->
+      <div class="d-flex mb-3" style="background-color: whitesmoke;padding: 10px;padding-right:80px ;">
+        <div class="me-auto p-2" style="font-size: 20px;"><a href="/" style="text-decoration: none;color: black;"> <b> ____The Culture Clothing.Co</b> </a></div>
+        <div class="p-2"> <a href="/Cart">  <img src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png" width="18px"  alt=""> </a> &nbsp<span class="badge bg-secondary">New</span>&nbsp &nbsp </div>
+        <div class="p-2"><img width="18px" src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="ccsc"></div>
+      </div>
+    
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+    <ul class="nav justify-content-center happy">
+        <li class="nav-item">
+          <a style="color: aliceblue;" class="nav-link disabled ">⚡️ HAPPY HOLIDAY DEALS ON EVERYTHING ⚡️</a>
+        </li>
+      </ul>
+      <br>
+      
+
+      <!-- // NAv for pree shiping type -->
+      
+      <br>
+      <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+      <div style="text-align: center;">
+
+        <h4 style="color: gray;">KIDS COLLECTION</h4>
+        <h1>Best Picks 2023</h1>
+        <br>
+        
+
+      </div>
+
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-left: 20%;margin-right: 20%">
+
+        <% ;result.forEach(function(item) { %>
+        <% if(item.category=='Kids'){ %>
+        <div class="col">
+          <div class="card" style="border: 0px solid black;">
+            <img src="images/<%= item.image  %>"  height="450px" class="card-img-top" alt="...">
+            <div class="card-body" ">
+                <h5 class="card-title"><%= item.name  %> <br><hr>
+                    <span style="font-size: 16px;color: gray;"> <%= item.description  %> </span><br><br>
+                    ₹<%= item.price  %></h5>
+                    <br>
+                    <form action="/add_to_cart" method="post">
+                        <input type="hidden" name="id" value="<%= item.id  %>">
+                        <input type="hidden" name="name" value="<%= item.name  %>">
+                        <input type="hidden" name="price" value="<%= item.price  %>">
+                        <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="image" value="<%= item.image  %>">
+                        <input type="hidden" name="quan" value="<%= item.quantity %>">
+                        <% if(item.quantity>0){ %>
+                          <div class="d-grid gap-2">
+                              <input type="submit" value="Add to Cart" class="btn btn-outline-primary">
+                              
+                            </div>
+                          <% }else{ %>
+                              <div class="d-grid gap-2">
+                                  <input type="submit" value="Out of Stock!" class="btn btn-outline-danger" disabled="disabled">
+                                  
+                                </div>
+
+                          <% } %>
+                        
+                        
+  
+                    </form>
+            </div>
+          </div>
+          
+        </div>
+        <% } %>
+        <% }) %>
+      </div>
+
+      <!-- Timer ------------------------------------------------------------------------------------------------------------------------------ -->
+      <br>
+      <br>
+      <br>
+      
+      <div  >
+
+        <img src="https://img.freepik.com/free-vector/horizontal-sale-banner-template_23-2148897328.jpg?w=2000&t=st=1681197989~exp=1681198589~hmac=390ce2611ee8dca51f429e9062cdf2a622bb4134b99d60c4ac24441face3f55d" width="100%" height="800px" alt="">
+
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="Brand">
+
+        <h2 style="text-align: center;font-size: 40px;">@shoppers</h2>
+        <br>
+        <p style="text-align: center;color: gray;">Appear, dry there darkness they're seas, dry waters.</p>
+        <br>
+        <br>
+
+        <ul class="nav justify-content-center">
+            
+            <li class="nav-item">
+              <a class="nav-link disabled"><img src="https://cdn-icons-png.flaticon.com/512/732/732229.png" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"><img src="https://cdn-icons-png.flaticon.com/512/732/732160.png" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img  width="100px"  src="https://cdn.iconscout.com/icon/free/png-512/calvin-1-202538.png?f=avif&w=512" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img width="100px" src="https://cdn.iconscout.com/icon/free/png-512/chanel-202547.png?f=avif&w=512" alt="https://cdn.iconscout.com/icon/free/png-512/chanel-202547.png?f=avif&w=512"> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+          </ul>
+          <ul class="nav justify-content-center">
+            
+            <li class="nav-item">
+              <a class="nav-link disabled"><img src="https://cdn.iconscout.com/icon/free/png-256/fila-3-202596.png?f=avif&w=256" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"><img src="https://cdn.iconscout.com/icon/free/png-256/levi-1-202634.png?f=avif&w=256" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img  width="100px"  src="https://cdn.iconscout.com/icon/free/png-256/lacoste-202630.png?f=avif&w=256" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img width="100px" src="https://cdn.iconscout.com/icon/free/png-256/benetton-202726.png?f=avif&w=256" alt="https://cdn.iconscout.com/icon/free/png-512/chanel-202547.png?f=avif&w=512"> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+          </ul>
+          <ul class="nav justify-content-center">
+            
+            <li class="nav-item">
+              <a class="nav-link disabled"><img src="https://cdn.iconscout.com/icon/free/png-256/armani-3-202721.png?f=avif&w=256" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"><img src="https://cdn.iconscout.com/icon/free/png-256/benetton-2-202729.png?f=avif&w=256" width="100px" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img  width="100px"  src="https://cdn.iconscout.com/icon/free/png-256/hugo-202619.png?f=avif&w=256" alt=""> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled"><img width="100px" src="https://cdn.iconscout.com/icon/free/png-256/fila-2-202593.png?f=avif&w=256" alt="https://cdn.iconscout.com/icon/free/png-512/chanel-202547.png?f=avif&w=512"> &nbsp &nbsp  &nbsp &nbsp </a>
+              </li>
+          </ul>
+
+          <hr style="width: 70%;margin-left: 15%;">
+
+
+      </div>
+
+
+      <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+      <br>
+      <br>
+      <br>
+
+      <div class="footer" style="background-image: url('https://static.vecteezy.com/system/resources/previews/006/789/423/original/abstract-black-friday-wallpaper-luxury-background-template-color-art-template-business-dark-free-vector.jpg');">
+        
+        <br>
+        <br>
+        <br>
+        <h4 style="text-align: center;color: white;">Want style Ideas and Treats?</h4>
+        <br>
+        <br>
+        <br>
+        <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 25px;">____The Culture Clothing.Co</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 12px"><b>SUPPORT</b> </div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 12px"><b>SHOP</b> </div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 12px"><b>COMPANY</b> </div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 12px"><b>CONTACT</b> </div>
+          </div>
+          <br>
+          <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img width="20px" src="https://cdn.iconscout.com/icon/free/png-512/logo-1889515-1597575.png?f=avif&w=512" alt="">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img width="20px" src="https://cdn.iconscout.com/icon/free/png-512/twitter-241-721979.png?f=avif&w=512" alt="">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img width="20px" src="https://cdn.iconscout.com/icon/free/png-512/linkedin-42-151143.png?f=avif&w=512" alt="">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img width="20px" src="https://cdn.iconscout.com/icon/free/png-512/logo-1889504-1597564.png?f=avif&w=512" alt=""></div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px"></div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px"></div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px"></div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px"></div>
+          </div>
+          <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px;">_______________________________________________</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Contact Us</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Men's Shopping</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Our Story</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">1-202-555-0105</div>
+          </div>
+          <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px;">_______________________________________________</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">FAQs Us</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Women's Shoppingg</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Careers</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">1-202-555-0106</div>
+          </div>
+          <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px;">_______________________________________________</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Contact Us</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">kids's Shopping</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Our Story</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">1-202-555-0105</div>
+          </div>
+          <div class="d-flex" style="text-align: center;margin-left: 240px; margin-right: 240px;" >
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px;">_______________________________________________</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">FAQs Us</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Accesories Shoppingg</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">Careers</div>
+            <div class="p-1 flex-fill" style="color: white;font-size: 15px">@Clothing.com</div>
+          </div>
+          
+          
+          <br>
+          <br>
+          <hr style="width: 70%;margin-left: 15%;color: white;">
+          <br>
+          <br>
+          
+          </div>
+          
+        
+
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../retail website"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "retail website"
+	}
+}
